@@ -1,0 +1,101 @@
+  /* Create an accessible color palette using var()function */
+  /* https://www.w3schools.com/css/css3_variables.asp */
+  
+
+:root{
+  --primary-bg-color: #b6d6f6;
+  --input-label-color: white;
+  --text-colors: darkblue;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.skip a {
+    position: absolute;
+    top: -100px;
+    left: 10px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    z-index: 1000;
+}
+
+.skip a:focus {
+    top: 10px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.radio-option input[type="radio"] {
+  width: auto;
+  padding: 0;
+  margin: 0;
+  accent-color: #1179e8;
+}
+
+.radio-option label {
+  cursor: pointer;
+}
+
+  form {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    width:70%;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: var(--text-colors);
+    background: var(--primary-bg-color);
+  }
+
+  .radio {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    /* background: #575294; */
+    color: var(--text-colors);
+  }
+
+  #name {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    background: var(--input-label-color);
+    color: black;
+  }
+
+  #message {
+    width: 100%;
+    padding: 10px;
+    resize: vertical;
+  }
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
